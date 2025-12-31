@@ -8,6 +8,14 @@ name: plyst
 
 <br><br>
 
+# root 계정에서 plyst 생성
+
+`create user plyst@'%' identified by '1234';`   
+`grant all privileges on *.* to plyst@'%';`   
+`flush privileges;`   
+   
+<br><br>
+
 ```sql
 CREATE TABLE `users` (
     `id`          INT       NOT NULL AUTO_INCREMENT,
