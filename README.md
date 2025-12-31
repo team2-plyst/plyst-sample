@@ -10,10 +10,22 @@ name: plyst
 
 # root 계정에서 plyst 생성
 
-`create user plyst@'%' identified by '1234';`   
-`grant all privileges on *.* to plyst@'%';`   
-`flush privileges;`   
+```create user plyst@'%' identified by '1234';```   
+```grant all privileges on *.* to plyst@'%';```   
+```flush privileges;```   
    
+<br><br>
+
+# 백엔드 실행
+* 백엔드 폴더 이동 후 명령어 칠 것
+```.\gradlew.bat bootRun```
+
+<br>
+
+# 프론트엔드 실행
+* 프론트엔드 폴더 이동 후 명령어 칠 것
+```npm run dev```
+
 <br><br>
 
 ```sql
