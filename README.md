@@ -1,10 +1,10 @@
 # plyst
 
-root password: 123456
-
-DB connector name: plyst-test
-password: 1234
-name: plyst
+root password: 123456   
+   
+DB connector name: plyst-test   
+password: 1234   
+name: plyst   
 
 <br><br>
 
