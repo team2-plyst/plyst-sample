@@ -1,0 +1,13 @@
+package com.plyst.domain.playlist.repository;
+
+import com.plyst.domain.playlist.entity.PlaylistItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface PlaylistItemRepository extends JpaRepository<PlaylistItem, Long> {
+    List<PlaylistItem> findByPlaylistIdOrderByOrderNoAsc(Long playlistId);
+    void deleteByPlaylistId(Long playlistId);
+}

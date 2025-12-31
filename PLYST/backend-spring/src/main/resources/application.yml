@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: plyst-backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/plyst?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  sql:
+    init:
+      mode: never
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        "[format_sql]": true
+        "[dialect]": org.hibernate.dialect.MySQLDialect
+
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+
+server:
+  port: 8081
+
+# Spotify API Configuration
+app:
+  spotify:
+    client-id: ${SPOTIFY_CLIENTID:743fc6f81d88444894e286bc3b5b2a36}
+    client-secret: ${SPOTIFY_CLIENTSECRET:b9fbb86761b14de99f0c4b704bb02a6f}
+
+logging:
+  level:
+    "[org.hibernate.SQL]": DEBUG
+    "[org.hibernate.type.descriptor.sql.BasicBinder]": TRACE
